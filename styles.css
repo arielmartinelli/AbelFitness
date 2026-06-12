@@ -216,13 +216,24 @@ header.scrolled {
   color: var(--accent);
 }
 
-.logo-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent);
-  border-radius: 50%;
-  box-shadow: var(--shadow-neon);
+.logo-svg {
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+  filter: drop-shadow(0 0 8px rgba(var(--accent-rgb), 0.5));
+  transition: var(--transition-smooth);
+}
+
+.logo:hover .logo-svg,
+.footer-logo-wrapper:hover .logo-svg {
+  transform: rotate(-10deg) scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(var(--accent-rgb), 0.8));
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .nav-links {

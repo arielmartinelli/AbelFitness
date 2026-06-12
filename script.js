@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnPlanCoaching = document.getElementById('btn-plan-coaching');
   const btnPlanElite = document.getElementById('btn-plan-elite');
 
-  const waPhone = '34600000000'; // Target WhatsApp number
+  const waPhone = '5493517048406'; // Target WhatsApp number
 
   // Price definitions
   const prices = {
