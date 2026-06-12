@@ -13,4 +13,4 @@ Página de presentación interactiva para entrenador personal (AbelFitness).
 * `index.html` - Estructura semántica de las secciones.
 * `styles.css` - Estilos con variables CSS, animaciones y responsive design.
 * `script.js` - Control del carrusel, toggles y lógica de contacto.
-* `img/abel_trainer.png` - Recurso de imagen fotorrealista para el perfil.
+* `img/abel_trainer.jpg` - Recurso de imagen fotorrealista para el perfil.
