@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbelFitness | Personal Trainer & Asesoramiento Deportivo Online</title>
+  <meta name="description" content="Transforma tu cuerpo y mente con AbelFitness. Entrenamientos personalizados, planes de nutrición deportiva y soporte 24/7 por WhatsApp. Empieza hoy.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- Header / Navigation --- -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#inicio" class="logo">
+        ABEL<span>FITNESS</span><span class="logo-dot"></span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+        <li><a href="#acreditaciones" class="nav-link">Acreditaciones</a></li>
+        <li><a href="#opiniones" class="nav-link">Opiniones</a></li>
+        <li><a href="#planes" class="nav-link">Planes</a></li>
+      </ul>
+
+      <a href="https://wa.me/34600000000?text=Hola%20Abel!%20Quiero%20saber%20más%20sobre%20tus%20planes%20de%20entrenamiento." target="_blank" rel="noopener noreferrer" class="nav-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.948h.003c4.368 0 7.927-3.558 7.929-7.93a7.86 7.86 0 0 0-2.33-5.592M7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.98c-.202-.1-1.195-.59-1.378-.657-.183-.067-.317-.1-.449.1-.132.2-.511.657-.626.79-.114.133-.227.15-.429.05-.201-.1-.852-.314-1.624-.999-.6-.535-1.005-1.199-1.123-1.4-.117-.201-.012-.31.088-.41.09-.09.202-.234.302-.35.1-.117.133-.2.2-.33.067-.133.034-.25-.017-.35-.05-.1-.449-1.08-.616-1.485-.162-.395-.327-.34-.449-.346-.113-.006-.242-.007-.371-.007-.13 0-.34.05-.518.258-.178.208-.68.665-.68 1.623 0 .957.697 1.884.795 2.016.098.133 1.37 2.1 3.32 2.946.464.2.823.32 1.106.41.467.149.893.128 1.228.077.373-.057 1.195-.49 1.362-.96.166-.472.166-.875.117-.96-.05-.085-.183-.133-.385-.233z"/>
+        </svg>
+        Escríbeme
+      </a>
+
+      <div class="mobile-toggle" id="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- Mobile Menu --- -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-menu-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre Mí</a></li>
+      <li><a href="#acreditaciones">Acreditaciones</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#planes">Planes</a></li>
+    </ul>
+    <a href="https://wa.me/34600000000?text=Hola%20Abel!%20Quiero%20saber%20más%20sobre%20tus%20planes%20de%20entrenamiento." target="_blank" rel="noopener noreferrer" class="nav-btn" style="align-self: flex-start; margin-top: 20px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.948h.003c4.368 0 7.927-3.558 7.929-7.93a7.86 7.86 0 0 0-2.33-5.592M7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.98c-.202-.1-1.195-.59-1.378-.657-.183-.067-.317-.1-.449.1-.132.2-.511.657-.626.79-.114.133-.227.15-.429.05-.201-.1-.852-.314-1.624-.999-.6-.535-1.005-1.199-1.123-1.4-.117-.201-.012-.31.088-.41.09-.09.202-.234.302-.35.1-.117.133-.2.2-.33.067-.133.034-.25-.017-.35-.05-.1-.449-1.08-.616-1.485-.162-.395-.327-.34-.449-.346-.113-.006-.242-.007-.371-.007-.13 0-.34.05-.518.258-.178.208-.68.665-.68 1.623 0 .957.697 1.884.795 2.016.098.133 1.37 2.1 3.32 2.946.464.2.823.32 1.106.41.467.149.893.128 1.228.077.373-.057 1.195-.49 1.362-.96.166-.472.166-.875.117-.96-.05-.085-.183-.133-.385-.233z"/>
+      </svg>
+      Escríbeme por WhatsApp
+    </a>
+  </div>
+
+  <!-- --- Hero Section --- -->
+  <section class="hero" id="inicio">
+    <div class="hero-grid">
+      <div class="hero-content reveal reveal-left">
+        <div class="hero-tag">
+          <span></span>Asesoramiento Deportivo 100% Personalizado
+        </div>
+        <h1>
+          Entrena con <br>
+          <span class="gradient-text">Propósito.</span><br>
+          Vive con Fuerza.
+        </h1>
+        <p class="hero-desc">
+          Soy Abel, tu entrenador personal. Te ayudo a optimizar tu entrenamiento, dominar tu nutrición y conseguir la mejor versión física y mental de tu vida, respaldado por la ciencia y con soporte continuo.
+        </p>
+        <div class="hero-ctas">
+          <a href="#planes" class="btn-primary">
+            Ver Planes de Entrenamiento
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#opiniones" class="btn-secondary">
+            Opiniones de Clientes
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-val">+5</span>
+            <span class="stat-lbl">Años de Exp</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">150+</span>
+            <span class="stat-lbl">Cambios de físico</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">98%</span>
+            <span class="stat-lbl">Tasa de éxito</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal reveal-right delay-2">
+        <div class="hero-accent-glow"></div>
+        <div class="hero-image-wrapper">
+          <img src="img/abel_trainer.png" alt="Abel Trainer Personal">
+        </div>
+        <div class="hero-floating-card">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="text-box">
+            <span>Transformación</span>
+            <p>12 Semanas Elite</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Sobre Mí Section --- -->
+  <section class="about" id="sobre-mi">
+    <div class="about-grid">
+      <div class="about-graphics reveal reveal-left">
+        <div class="about-box featured">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a5 5 0 0 0-5 5v3c0 1.5 1 3.5 3 4.5h4c2-1 3-3 3-4.5V7a5 5 0 0 0-5-5z"/></svg>
+          </div>
+          <h3>Ciencia y Método</h3>
+          <p>Planes basados en estudios de biomecánica y nutrición contrastada, no en mitos de gimnasio.</p>
+        </div>
+        <div class="about-box">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Soporte Directo</h3>
+          <p>Dudas, corrección de técnicas de ejercicios y ajustes por chat de WhatsApp sin esperas.</p>
+        </div>
+        <div class="about-box">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3>Adaptabilidad</h3>
+          <p>Rutinas diseñadas según tus horarios, si entrenas en casa, en un box o en gimnasio comercial.</p>
+        </div>
+        <div class="about-box featured">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Nutrición Flexible</h3>
+          <p>Sin dietas extremas de arroz y pollo. Menús sabrosos y adaptados a lo que te gusta comer.</p>
+        </div>
+      </div>
+      
+      <div class="about-info reveal reveal-right delay-2">
+        <span class="section-tag">Entrenador y Asesor</span>
+        <h2>¿Quién es Abel?</h2>
+        <p class="about-quote">
+          "Mi misión no es solo darte una hoja con ejercicios. Es enseñarte a entrenar de forma eficiente, a alimentarte sin obsesiones y a construir un estilo de vida fuerte que puedas mantener para siempre."
+        </p>
+        <p>
+          Llevo más de 5 años guiando a personas ocupadas, opositores y atletas recreativos hacia sus objetivos físicos. A través de un enfoque basado en la biomecánica, la programación inteligente del volumen y el acompañamiento personalizado, logro que dejes de perder el tiempo y empieces a ver cambios reales.
+        </p>
+        <a href="#planes" class="btn-primary">
+          Empieza tu Transformación
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Accreditaciones Section --- -->
+  <section class="accreditations" id="acreditaciones">
+    <div class="accreditations-container">
+      <span class="section-tag reveal">Garantía Profesional</span>
+      <h2 class="section-title reveal delay-1">Mis Acreditaciones</h2>
+      <p class="section-desc reveal delay-2">
+        Tu salud y rendimiento no son un juego. Cuento con certificaciones de prestigio internacional que respaldan la seguridad y eficacia de mi metodología de entrenamiento.
+      </p>
+      
+      <div class="accreditations-grid">
+        <div class="badge-card reveal reveal-scale">
+          <div class="badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <span class="badge-title">Personal Trainer</span>
+          <span class="badge-org">NASM-CPT</span>
+          <p class="badge-desc">Entrenador Personal certificado por la National Academy of Sports Medicine.</p>
+        </div>
+        
+        <div class="badge-card reveal reveal-scale delay-1">
+          <div class="badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          </div>
+          <span class="badge-title">Nutrición Deportiva</span>
+          <span class="badge-org">ICNS</span>
+          <p class="badge-desc">Especialización en nutrición avanzada para recomposición corporal y rendimiento.</p>
+        </div>
+        
+        <div class="badge-card reveal reveal-scale delay-2">
+          <div class="badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 2 18 2 18 6 6 6 6 2"/><rect x="3" y="6" width="18" height="16" rx="2"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+          </div>
+          <span class="badge-title">Biomecánica Aplicada</span>
+          <span class="badge-org">ACSM</span>
+          <p class="badge-desc">Estudio del movimiento enfocado en optimizar el reclutamiento muscular sin lesiones.</p>
+        </div>
+        
+        <div class="badge-card reveal reveal-scale delay-3">
+          <div class="badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="badge-title">Readaptador Físico</span>
+          <span class="badge-org">Universitario</span>
+          <p class="badge-desc">Capacitado en la reincorporación al deporte tras patologías o molestias articulares.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- WhatsApp Testimonials Section --- -->
+  <section class="testimonials" id="opiniones">
+    <div class="testimonials-container">
+      <div style="text-align: center;">
+        <span class="section-tag reveal">Casos de Éxito</span>
+        <h2 class="section-title reveal delay-1">Opiniones de Clientes</h2>
+        <p class="section-desc reveal delay-2">
+          Mira los mensajes directos que recibo por WhatsApp de clientes reales que ya están cumpliendo sus metas. Sin trampas ni cartón, progreso real.
+        </p>
+      </div>
+
+      <!-- Carousel Frame -->
+      <div class="carousel-wrapper reveal reveal-scale delay-3">
+        <div class="carousel-viewport" id="carousel-viewport">
+          <div class="carousel-track" id="carousel-track">
+            
+            <!-- Chat Card 1 -->
+            <div class="chat-card">
+              <div class="chat-header">
+                <div class="chat-user">
+                  <div class="chat-avatar">M</div>
+                  <div class="chat-user-info">
+                    <span class="chat-name">Marcos G.</span>
+                    <span class="chat-status">En línea</span>
+                  </div>
+                </div>
+                <div class="chat-header-actions">
+                  <span>📞</span>
+                  <span>📹</span>
+                  <span>⋮</span>
+                </div>
+              </div>
+              <div class="chat-body">
+                <div class="chat-bubble incoming">
+                  <p class="chat-bubble-text">
+                    ¡Abel! Quería escribirte porque acabo de pesarme y ya estoy en 78kg (empecé en 83.5kg hace 6 semanas). Lo mejor es que no me muero de hambre y tengo mucha más fuerza en el gimnasio. Los entrenamientos de pierna son mortales pero valen totalmente la pena 💪. ¡Gracias!
+                  </p>
+                  <span class="chat-bubble-time">10:42</span>
+                </div>
+                <div class="chat-bubble outgoing">
+                  <p class="chat-bubble-text">
+                    ¡Qué grande Marcos! Impresionante el compromiso que le estás metiendo. Esos 78kg son solo el principio, ¡vamos por más! 🔥🚀
+                  </p>
+                  <span class="chat-bubble-time">
+                    10:45 
+                    <svg viewBox="0 0 16 15" width="16" height="15"><path d="M15.01 3.3l-5.5 5.5-2.5-2.5-.7.7 3.2 3.2 6.2-6.2-.7-.7zm-6 5.5l-.7-.7-3.2 3.2-2.1-2.1-.7.7 2.8 2.8 3.9-3.9zm-6-2.2l-.7-.7-3.2 3.2.7.7 3.2-3.2z"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Card 2 -->
+            <div class="chat-card">
+              <div class="chat-header">
+                <div class="chat-user">
+                  <div class="chat-avatar chat-avatar-2">C</div>
+                  <div class="chat-user-info">
+                    <span class="chat-name">Camila R.</span>
+                    <span class="chat-status">En línea</span>
+                  </div>
+                </div>
+                <div class="chat-header-actions">
+                  <span>📞</span>
+                  <span>📹</span>
+                  <span>⋮</span>
+                </div>
+              </div>
+              <div class="chat-body">
+                <div class="chat-bubble incoming">
+                  <p class="chat-bubble-text">
+                    Hola Abel! Te paso los reportes de esta semana. Reduje 3cm de cintura y ya noto los hombros mucho más marcados. La receta de panqueques de avena que me diste me salvó la vida para el desayuno jajaja. Super contenta con el proceso.
+                  </p>
+                  <span class="chat-bubble-time">09:15</span>
+                </div>
+                <div class="chat-bubble outgoing">
+                  <p class="chat-bubble-text">
+                    Hola Cami! Qué alegría leer esto. La definición de hombros ya se nota muchísimo. Esos panqueques son clave. Seguimos firmes para la semana 8 👏👏
+                  </p>
+                  <span class="chat-bubble-time">
+                    09:22
+                    <svg viewBox="0 0 16 15" width="16" height="15"><path d="M15.01 3.3l-5.5 5.5-2.5-2.5-.7.7 3.2 3.2 6.2-6.2-.7-.7zm-6 5.5l-.7-.7-3.2 3.2-2.1-2.1-.7.7 2.8 2.8 3.9-3.9zm-6-2.2l-.7-.7-3.2 3.2.7.7 3.2-3.2z"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Card 3 -->
+            <div class="chat-card">
+              <div class="chat-header">
+                <div class="chat-user">
+                  <div class="chat-avatar chat-avatar-3">J</div>
+                  <div class="chat-user-info">
+                    <span class="chat-name">Javier M.</span>
+                    <span class="chat-status">Escribiendo...</span>
+                  </div>
+                </div>
+                <div class="chat-header-actions">
+                  <span>📞</span>
+                  <span>📹</span>
+                  <span>⋮</span>
+                </div>
+              </div>
+              <div class="chat-body">
+                <div class="chat-bubble incoming">
+                  <p class="chat-bubble-text">
+                    Buenas Abel, te quería comentar que hoy completé mi primer entrenamiento sin molestias en la rodilla izquierda. Las movilidades que agregamos al calentamiento hicieron magia. Hacía meses que no podía hacer sentadillas profundas sin dolor. Sos un crack.
+                  </p>
+                  <span class="chat-bubble-time">19:30</span>
+                </div>
+                <div class="chat-bubble outgoing">
+                  <p class="chat-bubble-text">
+                    ¡Excelente Javier! Me alegro muchísimo. La biomecánica no miente, activar bien la rodilla era clave. Ahora a meterle peso progresivamente y con cuidado 🎯
+                  </p>
+                  <span class="chat-bubble-time">
+                    19:35
+                    <svg viewBox="0 0 16 15" width="16" height="15"><path d="M15.01 3.3l-5.5 5.5-2.5-2.5-.7.7 3.2 3.2 6.2-6.2-.7-.7zm-6 5.5l-.7-.7-3.2 3.2-2.1-2.1-.7.7 2.8 2.8 3.9-3.9zm-6-2.2l-.7-.7-3.2 3.2.7.7 3.2-3.2z"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Card 4 -->
+            <div class="chat-card">
+              <div class="chat-header">
+                <div class="chat-user">
+                  <div class="chat-avatar chat-avatar-4">S</div>
+                  <div class="chat-user-info">
+                    <span class="chat-name">Sofía T.</span>
+                    <span class="chat-status">Últ. vez hoy a las 16:30</span>
+                  </div>
+                </div>
+                <div class="chat-header-actions">
+                  <span>📞</span>
+                  <span>📹</span>
+                  <span>⋮</span>
+                </div>
+              </div>
+              <div class="chat-body">
+                <div class="chat-bubble incoming">
+                  <p class="chat-bubble-text">
+                    Holaa Abel, pasé el examen físico de la oposición!! Los tiempos de carrera bajaron una barbaridad gracias a los sprints que planificaste. Muchas gracias de verdad por el aguante y motivarme cuando ya no daba más 😭❤️
+                  </p>
+                  <span class="chat-bubble-time">17:15</span>
+                </div>
+                <div class="chat-bubble outgoing">
+                  <p class="chat-bubble-text">
+                    ¡Siiii Sofía! Sabía que lo lograrías. Esa constancia en la pista de atletismo dio sus frutos. ¡A disfrutar de tu plaza bien ganada! 🏆🎉
+                  </p>
+                  <span class="chat-bubble-time">
+                    17:20
+                    <svg viewBox="0 0 16 15" width="16" height="15"><path d="M15.01 3.3l-5.5 5.5-2.5-2.5-.7.7 3.2 3.2 6.2-6.2-.7-.7zm-6 5.5l-.7-.7-3.2 3.2-2.1-2.1-.7.7 2.8 2.8 3.9-3.9zm-6-2.2l-.7-.7-3.2 3.2.7.7 3.2-3.2z"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="carousel-prev" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </button>
+          <button class="carousel-btn" id="carousel-next" aria-label="Siguiente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+
+        <!-- Indicator dots -->
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Pricing Section --- -->
+  <section class="pricing" id="planes">
+    <div class="pricing-container">
+      <span class="section-tag reveal">Inversión en ti</span>
+      <h2 class="section-title reveal delay-1">Planes y Precios</h2>
+      <p class="section-desc reveal delay-2">
+        Selecciona el nivel de acompañamiento que mejor se adapte a tus necesidades. Sin contratos de permanencia.
+      </p>
+
+      <!-- Billing Toggle Switcher -->
+      <div class="pricing-switch-container reveal reveal-scale delay-3">
+        <button class="switch-btn active" id="billing-monthly">Mensual</button>
+        <button class="switch-btn" id="billing-quarterly">
+          Trimestral <span class="switch-discount">-15%</span>
+        </button>
+      </div>
+
+      <!-- Pricing cards Grid -->
+      <div class="pricing-grid">
+        
+        <!-- Plan 1 -->
+        <div class="price-card reveal reveal-scale">
+          <div class="price-card-header">
+            <h3>Rutina Digital</h3>
+            <p>Ideal si ya sabes entrenar pero buscas orden y programación científica.</p>
+          </div>
+          <div>
+            <div class="price-tag">
+              <span class="price-currency">€</span>
+              <span class="price-amount" id="price-digital">39</span>
+              <span class="price-period">/ mes</span>
+            </div>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Rutina en app móvil dedicada
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Pauta alimenticia personalizada
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Guía básica de suplementación
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Soporte por correo electrónico
+              </li>
+              <li style="text-decoration: line-through; opacity: 0.5;">
+                <svg viewBox="0 0 20 20" fill="currentColor" style="color:var(--text-muted);"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                Feedback de técnica por video
+              </li>
+            </ul>
+          </div>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="price-btn" id="btn-plan-digital">
+            Elegir Rutina Digital
+          </a>
+        </div>
+
+        <!-- Plan 2 (Featured) -->
+        <div class="price-card featured reveal reveal-scale delay-1">
+          <span class="price-badge">Popular</span>
+          <div class="price-card-header">
+            <h3>Asesoramiento 1-a-1</h3>
+            <p>El plan definitivo si buscas acompañamiento, corrección constante y resultados acelerados.</p>
+          </div>
+          <div>
+            <div class="price-tag">
+              <span class="price-currency">€</span>
+              <span class="price-amount" id="price-coaching">79</span>
+              <span class="price-period">/ mes</span>
+            </div>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Todo lo de "Rutina Digital"
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Revisión diaria/semanal por WhatsApp
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Corrección de videos de tus ejercicios
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Videollamada mensual de control
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Ajustes ilimitados de planes
+              </li>
+            </ul>
+          </div>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="price-btn featured" id="btn-plan-coaching">
+            Elegir Asesoramiento 1-a-1
+          </a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="price-card reveal reveal-scale delay-2">
+          <div class="price-card-header">
+            <h3>Elite Transformation</h3>
+            <p>Pensado para opositores, atletas o quienes quieren un seguimiento premium diario 24/7.</p>
+          </div>
+          <div>
+            <div class="price-tag">
+              <span class="price-currency">€</span>
+              <span class="price-amount" id="price-elite">149</span>
+              <span class="price-period">/ mes</span>
+            </div>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Todo lo de "Asesoramiento 1-a-1"
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Atención prioritaria WhatsApp (24h)
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                2 Videollamadas de revisión al mes
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Planificación de NEAT y Cardio diario
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Descuento especial en marcas afiliadas
+              </li>
+            </ul>
+          </div>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="price-btn" id="btn-plan-elite">
+            Elegir Elite Transformation
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Contact Section --- -->
+  <section class="contact" id="contacto">
+    <div class="contact-container reveal reveal-scale">
+      <div class="contact-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.948h.003c4.368 0 7.927-3.558 7.929-7.93a7.86 7.86 0 0 0-2.33-5.592M7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.98c-.202-.1-1.195-.59-1.378-.657-.183-.067-.317-.1-.449.1-.132.2-.511.657-.626.79-.114.133-.227.15-.429.05-.201-.1-.852-.314-1.624-.999-.6-.535-1.005-1.199-1.123-1.4-.117-.201-.012-.31.088-.41.09-.09.202-.234.302-.35.1-.117.133-.2.2-.33.067-.133.034-.25-.017-.35-.05-.1-.449-1.08-.616-1.485-.162-.395-.327-.34-.449-.346-.113-.006-.242-.007-.371-.007-.13 0-.34.05-.518.258-.178.208-.68.665-.68 1.623 0 .957.697 1.884.795 2.016.098.133 1.37 2.1 3.32 2.946.464.2.823.32 1.106.41.467.149.893.128 1.228.077.373-.057 1.195-.49 1.362-.96.166-.472.166-.875.117-.96-.05-.085-.183-.133-.385-.233z"/>
+        </svg>
+      </div>
+      <h2>¿Dudas sobre cuál elegir?</h2>
+      <p>
+        Si tienes un caso especial (lesiones, competiciones, oposiciones) o quieres contarme tu objetivo para que te asesore de forma directa, escríbeme un WhatsApp y lo vemos juntos.
+      </p>
+      <a href="https://wa.me/34600000000?text=Hola%20Abel,%20te%20escribo%20desde%20tu%20web.%20Tengo%20unas%20dudas%20sobre%20los%20planes%20y%20quería%20consultarte..." target="_blank" rel="noopener noreferrer" class="contact-btn">
+        Consultar por WhatsApp Gratis
+      </a>
+    </div>
+  </section>
+
+  <!-- --- Footer --- -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-logo">ABEL<span>FITNESS</span></p>
+      <p>&copy; 2026 AbelFitness. Todos los derechos reservados. Diseñado por y para atletas.</p>
+      <ul class="footer-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#planes">Planes</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
