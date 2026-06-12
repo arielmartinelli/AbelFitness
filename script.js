@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Price definitions
   const prices = {
-    monthly: { digital: '39', coaching: '79', elite: '149' },
-    quarterly: { digital: '33', coaching: '67', elite: '126' } // Approx 15% discount
+    monthly: { digital: '25.000', coaching: '49.000', elite: '89.000' },
+    quarterly: { digital: '21.250', coaching: '41.650', elite: '75.650' } // Approx 15% discount
   };
 
   function updatePricing(billingMode) {
@@ -117,9 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update WhatsApp links
     const billingLabel = billingMode === 'monthly' ? 'Mensual' : 'Trimestral';
     
-    const msgDigital = `Hola Abel, me interesa el plan de Rutina Digital (${billingLabel} - €${prices[billingMode].digital}/mes). ¿Cuáles son los pasos a seguir?`;
-    const msgCoaching = `Hola Abel, me interesa el plan de Asesoramiento 1-a-1 (${billingLabel} - €${prices[billingMode].coaching}/mes). ¿Cómo empezamos a entrenar?`;
-    const msgElite = `Hola Abel, me interesa el plan Elite Transformation (${billingLabel} - €${prices[billingMode].elite}/mes). Me gustaría recibir más información.`;
+    const msgDigital = `Hola Abel, me interesa el plan de Rutina Digital (${billingLabel} - $${prices[billingMode].digital}/mes). ¿Cuáles son los pasos a seguir?`;
+    const msgCoaching = `Hola Abel, me interesa el plan de Asesoramiento 1-a-1 (${billingLabel} - $${prices[billingMode].coaching}/mes). ¿Cómo empezamos a entrenar?`;
+    const msgElite = `Hola Abel, me interesa el plan Elite Transformation (${billingLabel} - $${prices[billingMode].elite}/mes). Me gustaría recibir más información.`;
 
     btnPlanDigital.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msgDigital)}`;
     btnPlanCoaching.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msgCoaching)}`;
