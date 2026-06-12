@@ -307,4 +307,37 @@ document.addEventListener('DOMContentLoaded', () => {
       slideToIndex();
     });
   }
+
+  // --- 7. Theme Color Switcher ---
+  const themeBtnGreen = document.getElementById('theme-btn-green');
+  const themeBtnYellow = document.getElementById('theme-btn-yellow');
+
+  function setTheme(theme) {
+    if (theme === 'yellow') {
+      document.body.classList.add('theme-yellow');
+      if (themeBtnGreen && themeBtnYellow) {
+        themeBtnGreen.classList.remove('active');
+        themeBtnYellow.classList.add('active');
+      }
+      localStorage.setItem('abel-fitness-theme', 'yellow');
+    } else {
+      document.body.classList.remove('theme-yellow');
+      if (themeBtnGreen && themeBtnYellow) {
+        themeBtnGreen.classList.add('active');
+        themeBtnYellow.classList.remove('active');
+      }
+      localStorage.setItem('abel-fitness-theme', 'green');
+    }
+  }
+
+  if (themeBtnGreen && themeBtnYellow) {
+    themeBtnGreen.addEventListener('click', () => setTheme('green'));
+    themeBtnYellow.addEventListener('click', () => setTheme('yellow'));
+
+    // Load saved preference
+    const savedTheme = localStorage.getItem('abel-fitness-theme');
+    if (savedTheme === 'yellow') {
+      setTheme('yellow');
+    }
+  }
 });

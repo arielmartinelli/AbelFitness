@@ -41,6 +41,17 @@
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* --- Yellow Theme Overrides --- */
+body.theme-yellow {
+  --accent: #ffe600;
+  --accent-rgb: 255, 230, 0;
+  --accent-hover: #e6cf00;
+  --accent-dim: rgba(255, 230, 0, 0.08);
+  --border-focus: rgba(255, 230, 0, 0.3);
+  --shadow-neon: 0 0 20px rgba(255, 230, 0, 0.25);
+  --shadow-neon-strong: 0 0 35px rgba(255, 230, 0, 0.5);
+}
+
 /* --- Base & Reset --- */
 * {
   box-sizing: border-box;
@@ -266,6 +277,50 @@ header.scrolled {
   background-color: var(--accent);
   color: var(--bg-primary);
   box-shadow: var(--shadow-neon);
+}
+
+/* Theme Switcher */
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  padding: 4px;
+  border-radius: 50px;
+  margin-right: 12px;
+}
+
+.theme-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  border: 1.5px solid transparent;
+}
+
+.theme-btn.btn-green {
+  background-color: #d2ff2d;
+}
+
+.theme-btn.btn-yellow {
+  background-color: #ffe600;
+  margin-left: 6px;
+}
+
+.theme-btn.active {
+  border-color: #ffffff;
+  box-shadow: 0 0 8px var(--accent);
+  transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  header .nav-btn {
+    display: none;
+  }
 }
 
 /* Mobile Menu Toggle */
