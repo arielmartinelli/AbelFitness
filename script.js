@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Price definitions
   const prices = {
-    monthly: { digital: '25.000', coaching: '49.000', elite: '89.000' },
-    quarterly: { digital: '21.250', coaching: '41.650', elite: '75.650' } // Approx 15% discount
+    monthly: { digital: '30.000', coaching: '40.000', elite: '50.000' },
+    quarterly: { digital: '25.500', coaching: '34.000', elite: '42.500' } // Approx 15% discount
   };
 
   function updatePricing(billingMode) {
@@ -117,9 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update WhatsApp links
     const billingLabel = billingMode === 'monthly' ? 'Mensual' : 'Trimestral';
     
-    const msgDigital = `Hola Abel, me interesa el plan de Rutina Digital (${billingLabel} - $${prices[billingMode].digital}/mes). ¿Cuáles son los pasos a seguir?`;
-    const msgCoaching = `Hola Abel, me interesa el plan de Asesoramiento 1-a-1 (${billingLabel} - $${prices[billingMode].coaching}/mes). ¿Cómo empezamos a entrenar?`;
-    const msgElite = `Hola Abel, me interesa el plan Elite Transformation (${billingLabel} - $${prices[billingMode].elite}/mes). Me gustaría recibir más información.`;
+    const msgDigital = `Hola Abel, me interesa el plan de Asesoramiento Online (${billingLabel} - $${prices[billingMode].digital}/mes). ¿Cómo empezamos?`;
+    const msgCoaching = `Hola Abel, me interesa el plan Presencial 2x Semanal en Manantiales (${billingLabel} - $${prices[billingMode].coaching}/mes). ¿Cuáles son los horarios de Martes y Jueves?`;
+    const msgElite = `Hola Abel, me interesa el plan Presencial 3x Semanal en Manantiales (${billingLabel} - $${prices[billingMode].elite}/mes). ¿Cómo reservo mi lugar para sumar los viernes?`;
 
     btnPlanDigital.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msgDigital)}`;
     btnPlanCoaching.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msgCoaching)}`;
