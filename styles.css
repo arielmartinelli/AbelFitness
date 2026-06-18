@@ -1515,7 +1515,13 @@ footer {
 
 @media (min-width: 768px) {
   .admin-content-grid {
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .admin-content-grid {
+    grid-template-columns: 1fr 1fr 1.2fr;
   }
 }
 

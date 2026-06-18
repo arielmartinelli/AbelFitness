@@ -209,6 +209,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Admin Credentials Helper Functions
+  function getAdminCredentials() {
+    const data = localStorage.getItem('abel-fitness-admin');
+    if (!data) {
+      return { user: 'Abel', pass: 'abel123' };
+    }
+    return JSON.parse(data);
+  }
+
+  function saveAdminCredentials(creds) {
+    localStorage.setItem('abel-fitness-admin', JSON.stringify(creds));
+  }
+
   // Student Database Helper Functions
   function getStudents() {
     const data = localStorage.getItem('abel-fitness-students');
@@ -265,8 +278,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const user = document.getElementById('admin-user').value.trim();
       const pass = document.getElementById('admin-password').value;
       const errEl = document.getElementById('admin-login-error');
+      
+      const adminCreds = getAdminCredentials();
 
-      if (user === 'Abel' && pass === 'Abel el más fuerte') {
+      if (user === adminCreds.user && pass === adminCreds.pass) {
         errEl.style.display = 'none';
         formLoginAdmin.reset();
         
@@ -274,6 +289,19 @@ document.addEventListener('DOMContentLoaded', () => {
         portalHeaderPublic.style.display = 'none';
         portalLoginBox.style.display = 'none';
         portalAdminDashboard.style.display = 'block';
+        
+        // Pre-fill credentials in the change form
+        const changeUserEl = document.getElementById('change-admin-user');
+        const changePassEl = document.getElementById('change-admin-password');
+        if (changeUserEl) changeUserEl.value = adminCreds.user;
+        if (changePassEl) changePassEl.value = adminCreds.pass;
+        
+        // Update Admin badge
+        const adminBadge = document.querySelector('.user-badge.admin');
+        if (adminBadge) {
+          adminBadge.textContent = `${adminCreds.user} (Entrenador)`;
+        }
+
         renderStudents();
       } else {
         errEl.textContent = 'Usuario o contraseña de administración incorrectos.';
@@ -347,6 +375,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Change Admin Credentials Handle
+  const formChangeAdmin = document.getElementById('form-change-admin');
+  if (formChangeAdmin) {
+    formChangeAdmin.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newUser = document.getElementById('change-admin-user').value.trim();
+      const newPass = document.getElementById('change-admin-password').value;
+      const successEl = document.getElementById('change-admin-success');
+      const errorEl = document.getElementById('change-admin-error');
+
+      if (successEl) successEl.style.display = 'none';
+      if (errorEl) errorEl.style.display = 'none';
+
+      if (!newUser || !newPass) {
+        if (errorEl) {
+          errorEl.textContent = 'El usuario y la contraseña no pueden estar vacíos.';
+          errorEl.style.display = 'block';
+        }
+        return;
+      }
+
+      saveAdminCredentials({ user: newUser, pass: newPass });
+      
+      // Update badge
+      const adminBadge = document.querySelector('.user-badge.admin');
+      if (adminBadge) {
+        adminBadge.textContent = `${newUser} (Entrenador)`;
+      }
+
+      if (successEl) {
+        successEl.textContent = '¡Credenciales actualizadas con éxito!';
+        successEl.style.display = 'block';
+
+        setTimeout(() => {
+          successEl.style.display = 'none';
+        }, 3000);
+      }
+    });
+  }
+
   // Logout Handlers
   function logout() {
     portalStudentDashboard.style.display = 'none';
@@ -358,9 +426,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (formLoginStudent) formLoginStudent.reset();
     if (formLoginAdmin) formLoginAdmin.reset();
     if (formCreateStudent) formCreateStudent.reset();
+    if (formChangeAdmin) formChangeAdmin.reset();
 
-    document.getElementById('student-login-error').style.display = 'none';
-    document.getElementById('admin-login-error').style.display = 'none';
+    const studentLoginError = document.getElementById('student-login-error');
+    if (studentLoginError) studentLoginError.style.display = 'none';
+    const adminLoginError = document.getElementById('admin-login-error');
+    if (adminLoginError) adminLoginError.style.display = 'none';
+    const changeAdminError = document.getElementById('change-admin-error');
+    if (changeAdminError) changeAdminError.style.display = 'none';
+    const changeAdminSuccess = document.getElementById('change-admin-success');
+    if (changeAdminSuccess) changeAdminSuccess.style.display = 'none';
   }
 
   if (btnStudentLogout) {
