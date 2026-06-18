@@ -215,17 +215,16 @@ header.scrolled {
 .logo span {
   color: var(--accent);
 }
-
-.logo-svg {
+.logo-img {
   width: 32px;
   height: 32px;
-  color: var(--accent);
+  object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(var(--accent-rgb), 0.5));
   transition: var(--transition-smooth);
 }
 
-.logo:hover .logo-svg,
-.footer-logo-wrapper:hover .logo-svg {
+.logo:hover .logo-img,
+.footer-logo-wrapper:hover .logo-img {
   transform: rotate(-10deg) scale(1.1);
   filter: drop-shadow(0 0 15px rgba(var(--accent-rgb), 0.8));
 }
